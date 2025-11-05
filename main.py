@@ -135,7 +135,8 @@ async def transcribe_audio(audio: UploadFile = File(...)):
 async def health_check():
     return {"status": "healthy", "model_loaded": model is not None}
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_config=None)
-    
+#if __name__ == "__main__":
+ #   import uvicorn
+  #  uvicorn.run(app, host="0.0.0.0", port=10000, log_config=None)
+    if __name__ == "__main__":
+        app.run(host="0.0.0.0", port=10000)

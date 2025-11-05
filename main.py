@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 #from contextlib import asynccontextmanager
-import whisper
+#import whisper
 import tempfile
 import os
 from pathlib import Path

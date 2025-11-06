@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 #from contextlib import asynccontextmanager
-#import whisper
+import whisper
 import tempfile
 import os
 from pathlib import Path
@@ -135,8 +135,8 @@ async def transcribe_audio(audio: UploadFile = File(...)):
 async def health_check():
     return {"status": "healthy", "model_loaded": model is not None}
 
-#if __name__ == "__main__":
- #   import uvicorn
-  #  uvicorn.run(app, host="0.0.0.0", port=10000, log_config=None)
-    if __name__ == "__main__":
-        app.run(host="0.0.0.0", port=10000)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=10000, log_config=None)
+    #if __name__ == "__main__":
+        #app.run(host="0.0.0.0", port=10000)
